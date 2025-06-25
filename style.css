@@ -259,3 +259,86 @@ body {
 #addEventForm button:hover {
     background-color: #0056b3;
 } 
+
+/* 모바일 반응형 스타일 (최대 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    #sidebar {
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+        padding: 12px;
+        flex-direction: row;
+        align-items: flex-start;
+        overflow-x: auto;
+        gap: 12px;
+    }
+    #sidebar h1, #sidebar h2, #sidebar hr, #seriesSearch {
+        display: none;
+    }
+    .chapter-btns {
+        gap: 6px;
+        margin-bottom: 0;
+    }
+    .chapter-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+    #seriesContainer {
+        flex-grow: 1;
+        max-height: 80px;
+        overflow-y: auto;
+    }
+    .series-item {
+        padding: 8px 4px;
+        font-size: 13px;
+    }
+    #main-content {
+        padding: 10px;
+    }
+    #calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    #calendar-header h2 {
+        font-size: 20px;
+    }
+    #calendar-header button {
+        font-size: 20px;
+    }
+    #calendarGrid {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(6, minmax(32px, 1fr));
+        gap: 3px;
+    }
+    .calendar-day {
+        padding: 4px;
+        font-size: 12px;
+    }
+    .day-number {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    .event-item {
+        font-size: 10px;
+        padding: 2px 3px;
+    }
+    .modal-content {
+        padding: 15px;
+        max-width: 95vw;
+    }
+    #addEventForm input,
+    #addEventForm textarea,
+    #addEventForm select {
+        padding: 8px;
+        font-size: 13px;
+    }
+    #addEventForm button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
